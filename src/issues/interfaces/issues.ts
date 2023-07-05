@@ -1,7 +1,7 @@
 import { Label } from './label';
 
 export interface Issue {
-[x: string]: any;
+  [x: string]: any;
   url: string;
   repository_url: string;
   labels_url: string;
@@ -101,4 +101,17 @@ export interface User {
 
 export enum Type {
   User = 'User',
+}
+
+export interface Button {
+  action: () => void;
+  color?: string;
+  icon?: string;
+  size?: Size;
+  id: string;
+}
+
+export enum Size {
+  Xs = 'xs',
+  Sm = 'sm',
 }
